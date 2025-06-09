@@ -36,6 +36,10 @@ async function typeWriterEffectSequential(selector) {
         await typeWriterEffect(element);
         await new Promise(resolve => setTimeout(resolve, 10 * TYPING_SPEED[1]));
     }
+    const skipBtn = document.getElementById("skip");
+    if (skipBtn) {
+        skipBtn.remove();
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
